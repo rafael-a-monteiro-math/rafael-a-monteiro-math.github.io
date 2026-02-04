@@ -26,14 +26,14 @@ const { title = 'Rafael Monteiro | Applied Mathematician' } = Astro.props as Lay
 		<title>{title}</title>
 	</head>
 	<body
-		class="mx-auto max-w-screen-xl bg-white text-black dark:bg-black dark:text-white px-5 font-sans xs:text-[16px] md:text-[18px]"
+		class="mx-auto max-w-screen-xl bg-white text-black dark:bg-black dark:text-white px-5 font-sans xs:text-[16px] md:text-[18px] flex flex-col min-h-screen"
 	>
 	<!-- <body
 		class="mx-auto max-w-screen-xl bg-white px-5 font-sans text-white dark:bg-black xs:text-[16px] md:text-[18px]"
 	> -->
 		<Navbar />
 		<slot />
-		<Footer />
+		<Footer class="mt-auto" />
 		<style is:global>
 			/* Improve Page speed */
 			/* https://css-tricks.com/almanac/properties/c/content-visibility/ */

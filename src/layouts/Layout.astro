@@ -43,18 +43,14 @@ const { title = 'Rafael Monteiro | Applied Mathematician' } = Astro.props as Lay
 		</style>
 		<script>
 			const html = document.documentElement;
-			const storedTheme = localStorage.getItem('theme');
 
-			if (storedTheme === 'dark') {
-				html.classList.add('dark'); // user chose dark
-			} else {
-				html.classList.remove('dark'); // default light mode
-			}
+			// Always start in light mode by default
+			html.classList.remove('dark');
 
 			// Optional: expose toggle function
 			window.toggleTheme = () => {
-				html.classList.toggle('light');
-				localStorage.setItem('theme', html.classList.contains('light') ? 'light' : 'dark');
+				html.classList.toggle('dark');
+				localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
 			};
 			</script>
 	</body>

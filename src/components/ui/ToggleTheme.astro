@@ -47,11 +47,15 @@
 		// ) {
 		// 	switchTheme();
 		// }
-		if (localStorage.theme === 'dark') {
-		document.documentElement.classList.add('dark');
-		} else {
-		document.documentElement.classList.remove('dark'); // default is light
-		}
+		///////////////////////////////////////////////////////////////////////////
+		// TO CHANGE THE DEFAULT COLOR MODE, ADJUST THIS!
+		// Always start in light mode - removed automatic dark mode detection
+		// if (localStorage.theme === 'dark') {
+		// 	document.documentElement.classList.add('dark');
+		// } else {
+		// 	document.documentElement.classList.remove('dark'); // default is light
+		// }
+		///////////////////////////////////////////////////////////////////////////
 		button.addEventListener('click', () => {
 			switchTheme();
 		});

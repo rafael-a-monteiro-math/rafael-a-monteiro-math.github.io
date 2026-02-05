@@ -5,5 +5,5 @@ description: "Academic portfolio"
 img_alt: "presentation thumbnail"
 link: https://sites.google.com/view/rafaelmonteiro-math/home
 tags: ['academia', 'pattern formation', 'teaching', 'applied mathematics']
-img_src: assets/images/reaction-gifs-Belousov–Zhabotinsky-Reaction.gif
+img_src: assets/images/two-birds-mc-escher-1938.jpg
 ---

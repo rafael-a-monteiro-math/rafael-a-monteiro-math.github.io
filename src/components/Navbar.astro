@@ -7,14 +7,17 @@ const menuitems = [
 	{
 		title: 'About',
 		path: '/#about',
+		i18n: 'nav.about',
 	},
 	{
 		title: 'Projects',
 		path: '/#projects',
+		i18n: 'nav.projects',
 	},
 	{
 		title: 'Contact',
 		path: '/#contact',
+		i18n: 'nav.contact',
 	},
 ];
 ---
@@ -23,10 +26,10 @@ const menuitems = [
 	<Astronav>
 		<div class="flex w-full items-center justify-between lg:w-auto">
 			<a href="https://drive.google.com/file/d/1DDuDXC4fMh_cWu432GREJ2751ryQFHqp/view?usp=drive_link" download class="no-underline mr-3">
-			<Button size={'sm'} name="Download CV (English)">Download CV (English)</Button>
+			<Button size={'sm'} name="Download CV (English)"><span data-i18n="nav.cv.english">Download CV (English)</span></Button>
 			</a>
 			<a href="https://drive.google.com/file/d/1GCm1yD6zbyTWhD8W4xnrjz4dBOuIio1-/view?usp=drive_link" download class="no-underline mr-3">
-			<Button size={'sm'} name="Download CV (Portuguese)">Download CV (Portuguese)</Button>
+			<Button size={'sm'} name="Download CV (Portuguese)"><span data-i18n="nav.cv.portuguese">Download CV (Portuguese)</span></Button>
 			</a>
 			<div class="block lg:hidden">
 				<MenuIcon class="h-4 w-4 text-black dark:text-white" />
@@ -43,12 +46,21 @@ const menuitems = [
 									href={item.path}
 									class="flex py-2 text-black hover:text-orange dark:text-white dark:hover:text-orange lg:px-3"
 								>
-									{item.title}
+									<span data-i18n={item.i18n}>{item.title}</span>
 								</a>
 							</li>
 						</>
 					))
 				}
+				<li>
+					<button
+						id="lang-toggle"
+						aria-label="toggle language"
+						class="flex py-2 font-mono text-sm text-black hover:text-orange dark:text-white dark:hover:text-orange lg:px-3"
+					>
+						PT
+					</button>
+				</li>
 				<li><ToggleTheme /></li>
 			</ul>
 		</MenuItems>

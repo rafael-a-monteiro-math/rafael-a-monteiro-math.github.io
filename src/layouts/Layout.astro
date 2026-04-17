@@ -42,6 +42,7 @@ const { title = 'Rafael Monteiro | Applied Mathematician' } = Astro.props as Lay
 			}
 		</style>
 		<script>
+			declare global { interface Window { toggleTheme: () => void; } }
 			const html = document.documentElement;
 
 			// Always start in light mode by default
@@ -52,6 +53,38 @@ const { title = 'Rafael Monteiro | Applied Mathematician' } = Astro.props as Lay
 				html.classList.toggle('dark');
 				localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
 			};
-			</script>
+		</script>
+		<script>
+			import translations from '../i18n/translations.json';
+
+			type Lang = 'en' | 'pt';
+
+			function applyLang(lang: Lang) {
+				const dict = translations[lang] as Record<string, string>;
+
+				document.querySelectorAll<HTMLElement>('[data-i18n]').forEach((el) => {
+					const key = el.dataset.i18n!;
+					if (key in dict) el.textContent = dict[key];
+				});
+
+				document.querySelectorAll<HTMLElement>('[data-i18n-html]').forEach((el) => {
+					const key = el.dataset.i18nHtml!;
+					if (key in dict) el.innerHTML = dict[key];
+				});
+
+				const btn = document.getElementById('lang-toggle');
+				if (btn) btn.textContent = lang === 'en' ? 'PT' : 'EN';
+
+				localStorage.setItem('lang', lang);
+			}
+
+			const saved = (localStorage.getItem('lang') as Lang) || 'en';
+			applyLang(saved);
+
+			document.getElementById('lang-toggle')?.addEventListener('click', () => {
+				const current = (localStorage.getItem('lang') as Lang) || 'en';
+				applyLang(current === 'en' ? 'pt' : 'en');
+			});
+		</script>
 	</body>
 </html>

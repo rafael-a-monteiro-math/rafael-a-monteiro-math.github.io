@@ -10,6 +10,8 @@ interface Props {
   description: string;
   tags: string[];
   img_src?: string; // ✅ back to string
+  i18nTitle?: string;
+  i18nDesc?: string;
 }
 
 const {
@@ -19,6 +21,8 @@ const {
   title = 'Project title',
   tags = ['Tags'],
   img_src,
+  i18nTitle,
+  i18nDesc,
 } = Astro.props;
 
 // Use img_src if provided, otherwise fallback
@@ -42,8 +46,8 @@ const projectImage = img_src ?? '/assets/images/project.png';
         />
       </div>
       <div class="mt-1 p-2">
-        <h3 class="text-xl text-orange lg:text-2xl">{title}</h3>
-        <p class="text-sm text-black">{description}</p>
+        <h3 class="text-xl text-orange lg:text-2xl" data-i18n={i18nTitle}>{title}</h3>
+        <p class="text-sm text-black" data-i18n={i18nDesc}>{description}</p>
         <Tags tags={tags} />
       </div>
     </a>

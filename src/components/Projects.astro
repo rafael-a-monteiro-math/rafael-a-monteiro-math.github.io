@@ -11,7 +11,7 @@ const projects = await getCollection('projects', ({ data }) => {
 	data-testid="projects"
 	id="projects"
 	class="mt-40 mb-10 flex flex-col items-center justify-center md:mb-0 md:mt-40">
-	<h2 class="font-monospace text-2xl text-orange lg:text-4xl">Projects</h2>
+	<h2 data-i18n="projects.title" class="font-monospace text-2xl text-orange lg:text-4xl">Projects</h2>
 	<span class="mb-10 h-1 w-10 bg-orange"></span>
 	<div class="mb-10 flex w-full flex-col flex-wrap items-center md:flex-row">
 		{
@@ -21,8 +21,10 @@ const projects = await getCollection('projects', ({ data }) => {
 					title={project.data.title}
 					description={project.data.description}
 					alt={project.data.img_alt}
-					tags={project.data.tags} 
+					tags={project.data.tags}
 					img_src={project.data.img_src}
+					i18nTitle={`project.${project.slug}.title`}
+					i18nDesc={`project.${project.slug}.description`}
 				/>
 			))
 		}
@@ -34,7 +36,7 @@ const projects = await getCollection('projects', ({ data }) => {
 		class="flex flex-row text-black hover:text-orange dark:text-white dark:hover:text-orange"
 		aria-label="link to repository"
 	>
-		View full private projects archive
+		<span data-i18n="projects.archive">View full private projects archive</span>
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
 			fill="none"

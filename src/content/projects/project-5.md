@@ -6,5 +6,5 @@ description: "Courses that I taught in the past (at Indiana University and Unive
 img_alt: "presentation thumbnail"
 link: https://sites.google.com/view/rafaelmonteiro-math/home/teaching
 tags: ['teaching', 'calculus', 'linear algebra', 'undergraduate']
-img_src: assets/images/animation.gif
+img_src: assets/images/two-birds-mc-escher-1938.jpg
 ---

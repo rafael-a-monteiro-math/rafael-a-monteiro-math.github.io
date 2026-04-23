@@ -1,4 +1,5 @@
 ---
+order : 5
 inProgress: false
 title: "Teaching"
 description: "Courses that I taught in the past (at Indiana University and University of Minnesota)"

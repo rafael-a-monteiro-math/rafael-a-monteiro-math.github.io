@@ -10,6 +10,7 @@ interface Props {
   description: string;
   tags: string[];
   img_src?: string; // ✅ back to string
+  img_position?: string;
   i18nTitle?: string;
   i18nDesc?: string;
 }
@@ -21,6 +22,7 @@ const {
   title = 'Project title',
   tags = ['Tags'],
   img_src,
+  img_position = 'center',
   i18nTitle,
   i18nDesc,
 } = Astro.props;
@@ -43,6 +45,7 @@ const projectImage = img_src ?? '/assets/images/project.png';
           height="300"
           loading="eager"
           class="h-full w-full rounded-xl object-cover"
+          style={`object-position: ${img_position}`}
         />
       </div>
       <div class="mt-1 flex flex-grow flex-col p-2">

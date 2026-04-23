@@ -1,9 +1,10 @@
 ---
+order : 2
 inProgress: false
-title: "Industry and workshop talks"
-description: "Non-academic. Mostly in Portuguese"
-img_alt: "presentation thumbnail"
-link: /presentations
-tags: ['industry', 'workshop', 'noise', 'bias', 'critical thinking']
-img_src: assets/images/Workshop-Still-Header-Image.png
+title: Rising Sun Envelope Method
+description: 'The Rising Sun Envelope Method: an automatic and accurate peak location technique for XANES measurements'
+img_alt: project image alt text
+link: https://github.com/rafael-a-monteiro-math/Rising_Sun_Envelope_Method
+tags: ['Xanes', 'Peak detection', 'Noise reduction', 'Interpolation']
+img_src: assets/images/xanes-optimize.gif  # ✅ public path
 ---

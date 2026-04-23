@@ -1,9 +1,11 @@
 ---
+order : 1
 inProgress: false
-title: Rising Sun Envelope Method
-description: 'The Rising Sun Envelope Method: an automatic and accurate peak location technique for XANES measurements'
+title: Kukai solutions
+description: 'Software solutions for small businesses and their unique complexities'
 img_alt: project image alt text
-link: https://github.com/rafael-a-monteiro-math/Rising_Sun_Envelope_Method
-tags: ['Xanes', 'Peak detection', 'Noise reduction', 'Interpolation']
-img_src: assets/images/xanes-optimize.gif  # ✅ public path
+link: https://www.kukaisolutions.com/
+tags: ['Consulting', 'Software Development']
+img_src: assets/images/kukaisolutions_website_black.gif  # ✅ public path
+img_position: "30% center"  # options: "left center", "center", "right center", "top center", "bottom center", or e.g. "70% center"
 ---

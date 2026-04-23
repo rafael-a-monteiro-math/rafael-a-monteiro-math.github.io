@@ -1,9 +1,10 @@
 ---
+order : 3
 inProgress: false
-title: "My previous website (academic)"
-description: "Academic portfolio"
+title: "Industry and workshop talks"
+description: "Non-academic. Mostly in Portuguese"
 img_alt: "presentation thumbnail"
-link: https://sites.google.com/view/rafaelmonteiro-math/home
-tags: ['academia', 'pattern formation', 'teaching', 'applied mathematics']
-img_src: assets/images/two-birds-mc-escher-1938.jpg
+link: /presentations
+tags: ['industry', 'workshop', 'noise', 'bias', 'critical thinking']
+img_src: assets/images/Workshop-Still-Header-Image.png
 ---

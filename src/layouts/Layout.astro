@@ -40,6 +40,27 @@ const { title = 'Rafael Monteiro | Applied Mathematician' } = Astro.props as Lay
 			img {
 				content-visibility: auto;
 			}
+
+			:root {
+				--escher-opacity: 0.06;
+			}
+
+			body {
+				position: relative;
+			}
+
+			body::before {
+				content: '';
+				position: fixed;
+				inset: 0;
+				background-image: url('/escher_butterf_tile_gray.jpg');
+				background-repeat: no-repeat;
+				background-size: cover;
+				background-position: center;
+				opacity: var(--escher-opacity);
+				pointer-events: none;
+				z-index: -1;
+			}
 		</style>
 		<script>
 			declare global { interface Window { toggleTheme: () => void; } }
